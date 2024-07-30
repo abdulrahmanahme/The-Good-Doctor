@@ -31,6 +31,9 @@ dependencies:
   
   flutter_native_splash: ^2.3.5
 
+  flutter_svg: ^2.0.10+1
+  flutter_screenutil: ^5.9.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
