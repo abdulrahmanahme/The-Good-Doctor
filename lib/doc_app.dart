@@ -11,14 +11,15 @@ class DocApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 690),
+      designSize: const Size(375, 812),
       minTextAdapt: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Doc App',
+        title: 'Doc App ',
         theme: ThemeData(
           primaryColor: ColorManger.primaryColor,
           scaffoldBackgroundColor: ColorManger.whiteColor,
+          fontFamily: 'Inter'
         ),
         showSemanticsDebugger: false,
         initialRoute: Routes.onBoardingScreen,
