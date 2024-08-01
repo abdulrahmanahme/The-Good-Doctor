@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_good_doctor/core/helper/extantion.dart';
 import 'package:the_good_doctor/feature/onBorading/ui/widgets/background_image_and_text.dart';
-
 import '../../../core/helper/path_manger/path_manger.dart';
 import '../../../core/routing/routing.dart';
 import '../../../core/theming/text_styles.dart';
@@ -15,6 +14,7 @@ class OnBoardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+   
     return Scaffold(
         body: SafeArea(
       child: SingleChildScrollView(
@@ -30,11 +30,11 @@ class OnBoardingScreen extends StatelessWidget {
             const SizedBox(
               height: 50,
             ),
-           const BackgroundImageAndText(),
+            const BackgroundImageAndText(),
             // 5.h.verticalSpace,
             Center(
               child: Padding(
-                padding:const EdgeInsets.only(right: 20, top: 0, left: 20),
+                padding: const EdgeInsets.only(right: 20, top: 0, left: 20),
                 child: Column(
                   children: [
                     Text(
