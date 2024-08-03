@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_good_doctor/core/routing/routing.dart';
-
-import '../../feature/onBorading/ui/onBorading_screen.dart';
+import '../../feature/onBorading/ui/login/login_screen.dart';
+import '../../feature/onBorading/ui/onBorading/onBorading_screen.dart';
 
 class AppRouter {
  static Route generateRout(RouteSettings routeSettings) {
@@ -12,7 +12,7 @@ class AppRouter {
         );
       case Routes.loginScreen:
         return MaterialPageRoute(
-          builder: (_) => Container(),
+          builder: (_) => LoginScreen(),
         );
         default:
          return MaterialPageRoute(

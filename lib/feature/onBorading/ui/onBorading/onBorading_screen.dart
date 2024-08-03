@@ -3,11 +3,11 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_good_doctor/core/helper/extantion.dart';
-import 'package:the_good_doctor/feature/onBorading/ui/widgets/background_image_and_text.dart';
-import '../../../core/helper/path_manger/path_manger.dart';
-import '../../../core/routing/routing.dart';
-import '../../../core/theming/text_styles.dart';
-import '../../../core/widgets/default_button.dart';
+import 'package:the_good_doctor/feature/onBorading/ui/onBorading/widgets/background_image_and_text.dart';
+import '../../../../core/helper/path_manger/path_manger.dart';
+import '../../../../core/routing/routing.dart';
+import '../../../../core/theming/text_styles.dart';
+import '../../../../core/widgets/default_button.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -21,20 +21,20 @@ class OnBoardingScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(
-              height: 31,
+             SizedBox(
+              height: 31.h,
             ),
             Center(
               child: SvgPicture.asset(PathManger.svgPath + 'logoApp.svg'),
             ),
-            const SizedBox(
-              height: 50,
+             SizedBox(
+              height: 50.h,
             ),
             const BackgroundImageAndText(),
             // 5.h.verticalSpace,
             Center(
               child: Padding(
-                padding: const EdgeInsets.only(right: 20, top: 0, left: 20),
+                padding:  EdgeInsets.only(right: 20.w, top: 0, left: 20.w),
                 child: Column(
                   children: [
                     Text(
@@ -43,7 +43,7 @@ class OnBoardingScreen extends StatelessWidget {
                     ),
                     // 5.h.verticalSpace,
                     Text(
-                      ' easily with Docdoc to get a new experience.',
+                      ' easily with Doc doc to get a new experience.',
                       style: TextStyles.font12GreyColor400,
                     ),
                   ],
