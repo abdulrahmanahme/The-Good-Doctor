@@ -3,6 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:the_good_doctor/core/theming/colors.dart';
 
 class TextStyles {
+
+    static final TextStyle font13DarkBlue = TextStyle(
+    fontSize: 11.sp,
+    fontWeight: FontWeight.w400,
+    color: ColorManger.black100Color,
+  );
   static final TextStyle font11BlackText100W400 = TextStyle(
     fontSize: 11.sp,
     fontWeight: FontWeight.w400,
@@ -48,6 +54,10 @@ class TextStyles {
       fontSize: 32.sp,
       fontWeight: FontWeight.w700,
       color: ColorManger.primaryColor);
+ static final TextStyle font14GreyText400 = TextStyle(
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w400,
+      color: ColorManger.greyColor);
 
   static final TextStyle font16GreyText400 = TextStyle(
       fontSize: 16.sp,
@@ -58,6 +68,6 @@ class TextStyles {
     fontSize: 15.sp,
     fontWeight: FontWeight.w500,
     height: 2,
-    color: ColorManger.hintTextFormFelidColor,
+    color: ColorManger.greyTextColor,
   );
 }

@@ -6,7 +6,6 @@ import 'package:the_good_doctor/feature/login/logic/cubit/login_cubit.dart';
 import '../networking/dio_factory.dart';
 
 final getIt = GetIt.instance;
-
 setUp() {
   //Dio $ ApiService
   final dio = DioFactory.getDio();

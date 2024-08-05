@@ -13,5 +13,6 @@ class ColorManger {
   static const black100Color = Color(0xff212121);
   static const backgroundFromColor = Color(0xffFDFDFF);
 
+
   
 }

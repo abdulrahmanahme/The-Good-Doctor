@@ -33,7 +33,7 @@ class _ApiService implements ApiService {
     )
             .compose(
               _dio.options,
-              '/auth/login',
+              'https://vcare.integration25.com/api/auth/login',
               queryParameters: queryParameters,
               data: _data,
             )

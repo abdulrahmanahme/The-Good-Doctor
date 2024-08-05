@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:the_good_doctor/core/helper/extantion.dart';
 import 'package:the_good_doctor/core/widgets/default_button.dart';
+import 'package:the_good_doctor/feature/login/logic/cubit/login_cubit.dart';
 import 'package:the_good_doctor/feature/onBorading/ui/login/widgets/already_have_an_account_widget.dart';
+import 'package:the_good_doctor/feature/onBorading/ui/login/widgets/login_bloc_listener.dart';
 import 'package:the_good_doctor/feature/onBorading/ui/login/widgets/text_from_field_login_widget.dart';
 
 import '../../../../core/routing/routing.dart';
 import '../../../../core/theming/text_styles.dart';
 import '../../../../core/widgets/text_from_felid_widget.dart';
+import '../../../login/data/model/login_request_body.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -18,7 +22,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: ListView(
-          physics: const NeverScrollableScrollPhysics(),
+          // physics: const NeverScrollableScrollPhysics(),
           children: [
             50.h.verticalSpace,
             Padding(
@@ -39,19 +43,21 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             36.h.verticalSpace,
-            TextFormFieldWidget(
-              textEditingController: emailController,
-            ),
+            TextFormFieldWidget(),
             32.h.verticalSpace,
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.w),
               child: DefaultButton(
                 title: 'Login',
                 onPressed: () {
+                  validatedAndLogin(
+                    context,
+                  );
                   // context.pushNamed(Routes.loginScreen);
                 },
               ),
             ),
+            const LoginBlocListener(),
           ],
         ),
       ),
@@ -63,5 +69,18 @@ class LoginScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+void validatedAndLogin(
+  BuildContext context,
+) {
+  if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+    context.read<LoginCubit>().emitLoginState(
+          LoginRequestBody(
+            email: context.read<LoginCubit>().emailController.text,
+            password: context.read<LoginCubit>().passwordController.text,
+          ),
+        );
   }
 }
