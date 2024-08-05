@@ -14,6 +14,7 @@ class AlreadyHaveAnAccountWidget extends StatelessWidget {
         visualDensity: VisualDensity.compact,
         padding: EdgeInsets.symmetric(horizontal: 80.w),
         alignment: Alignment.center,
+        
       ),
       child: Row(
         children: [

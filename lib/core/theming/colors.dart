@@ -11,4 +11,7 @@ class ColorManger {
   static const greyCheckBoxColor = Color(0xffA9B2B9);
   static const primary100Color = Color(0xff247CFF);
   static const black100Color = Color(0xff212121);
+  static const backgroundFromColor = Color(0xffFDFDFF);
+
+  
 }

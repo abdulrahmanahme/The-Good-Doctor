@@ -18,7 +18,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: ListView(
-          physics:const NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           children: [
             50.h.verticalSpace,
             Padding(
@@ -58,7 +58,7 @@ class LoginScreen extends StatelessWidget {
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-         const Center(child:  AlreadyHaveAnAccountWidget()),
+          const Center(child: AlreadyHaveAnAccountWidget()),
           24.h.verticalSpace,
         ],
       ),
