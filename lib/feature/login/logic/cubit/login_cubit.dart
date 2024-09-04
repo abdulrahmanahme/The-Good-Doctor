@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:the_good_doctor/core/networking/api_error_handler.dart';
 import 'package:the_good_doctor/feature/login/data/repo/login_repo.dart';
 import '../../data/model/login_request_body.dart';
 part 'login_state.dart';
@@ -20,7 +21,12 @@ class LoginCubit extends Cubit<LoginState> {
     res.when(success: (loginSuccess) {
       emit(LoginState.success(loginSuccess));
     }, failure: (error) {
-      emit(LoginState.error(error: error.apiErrorModel.message ?? ''));
+      emit(LoginState.error(
+          error.data!.entries
+              .map((e) => '\n ${e.key}')
+              .toString(),
+        ),);
     });
   }
 }
+

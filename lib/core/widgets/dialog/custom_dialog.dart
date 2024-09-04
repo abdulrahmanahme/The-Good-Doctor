@@ -45,7 +45,7 @@ class CustomDialog extends StatelessWidget {
           ),
           Positioned(
             top: 200,
-            left: .370.sw,
+            left: .380.sw,
             child: widget ?? Container(),
           ),
           Positioned(
@@ -62,7 +62,7 @@ class CustomDialog extends StatelessWidget {
                 )),
           ),
           Positioned(
-            top: 310,
+            top: 270,
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -74,12 +74,11 @@ class CustomDialog extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                10.h.verticalSpace,
+                5.h.verticalSpace,
                 SizedBox(
-                  width: .8.sw,
+                  width: .9.sw,
                   child: Text(
                     description,
-                    maxLines: 2,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: desColor ?? Color(0xff292E3A),
@@ -146,7 +145,7 @@ class CustomDialog extends StatelessWidget {
                           context.pop();
                         },
                         icon: Container(
-                          height: 41.h,
+                          height: 35.h,
                           width: 144.w,
                           decoration: BoxDecoration(
                             color: Color(0xffD0DEEB),

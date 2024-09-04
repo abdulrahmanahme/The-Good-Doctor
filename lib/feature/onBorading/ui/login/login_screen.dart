@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:the_good_doctor/core/helper/extantion.dart';
+import 'package:the_good_doctor/core/routing/routing.dart';
 import 'package:the_good_doctor/core/widgets/default_button.dart';
 import 'package:the_good_doctor/feature/login/logic/cubit/login_cubit.dart';
 import 'package:the_good_doctor/feature/onBorading/ui/login/widgets/already_have_an_account_widget.dart';
@@ -49,7 +51,7 @@ class LoginScreen extends StatelessWidget {
                   validatedAndLogin(
                     context,
                   );
-                  // context.pushNamed(Routes.loginScreen);
+                  context.pushNamed(Routes.loginScreen);
                 },
               ),
             ),
@@ -60,7 +62,12 @@ class LoginScreen extends StatelessWidget {
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Center(child: AlreadyHaveAnAccountWidget()),
+           Center(child: AlreadyHaveAnAccountWidget(
+            isSignIn: true,
+            onPressed: (){
+              context.pushNamed(Routes.signUpScreen);
+            },
+          )),
           24.h.verticalSpace,
         ],
       ),

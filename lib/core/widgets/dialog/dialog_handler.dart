@@ -11,8 +11,8 @@ class DialogHandler {
             titleColor: Color(0xffFB4B4B),
             isError: true,
             widget: Container(
-              width: 100.r,
-              height: 100.r,
+              // width: 100.r,
+              // height: 100.r,
               decoration: ShapeDecoration(
                 color: Color(0xffFB4B4B),
                 shape: RoundedRectangleBorder(

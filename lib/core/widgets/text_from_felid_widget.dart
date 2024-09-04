@@ -55,7 +55,7 @@ class TextFormFelidWithTitleWidget extends StatelessWidget {
   final TextInputAction? textInputAction;
   final FocusNode? focusNode;
   final TextCapitalization? textCapitalization;
-  final onChange;
+  final  void Function(String)? onChange;
   final bool? autofocus;
   final bool? obscureText;
   final Widget? suffix;
@@ -110,10 +110,10 @@ class TextFormFelidWithTitleWidget extends StatelessWidget {
         decoration: InputDecoration(
           isDense: true,
           counterText: "",
-          // contentPadding: EdgeInsets.symmetric(
-          //   vertical: 15.h,
-          //   horizontal: 15.w,
-          // ),
+          contentPadding: EdgeInsets.symmetric(
+            vertical: 15.h,
+            horizontal: 15.w,
+          ),
           prefixIconConstraints: prefixIconSize == null
               ? null
               : BoxConstraints(
@@ -127,7 +127,7 @@ class TextFormFelidWithTitleWidget extends StatelessWidget {
                   maxWidth: suffixIconSize!,
                 ),
           filled: filled ?? true,
-          fillColor: ColorManger.backgroundFromColor,
+          fillColor:ColorManger.hintTextFormFelidColor ,
           prefixIconColor: prefixIconColor,
           suffixIconColor: suffixIconColor,
           prefixIcon: prefix,
@@ -138,9 +138,10 @@ class TextFormFelidWithTitleWidget extends StatelessWidget {
           border: InputBorder.none,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(borderRadius ?? 16.r),
-            borderSide: BorderSide(
+            borderSide:
+            BorderSide(
                 color: colorBorder ?? ColorManger.enableBorderColor,
-                width: borderWidth ?? 1.r),
+                width: borderWidth ?? 1.r)
           ),
           errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(borderRadius ?? 16.r),

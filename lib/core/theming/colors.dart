@@ -12,6 +12,11 @@ class ColorManger {
   static const primary100Color = Color(0xff247CFF);
   static const black100Color = Color(0xff212121);
   static const backgroundFromColor = Color(0xffFDFDFF);
+  static final blueShade200= Colors.blue.shade200;
+  static final greyShade200= Colors.grey[200];
+  static final pink200= Colors.pink[200];
+  static const greenColor= Colors.green;
+  static final greyShade400= Colors.grey.shade400;
 
 
   

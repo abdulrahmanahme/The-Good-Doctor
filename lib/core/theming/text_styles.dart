@@ -4,7 +4,40 @@ import 'package:the_good_doctor/core/theming/colors.dart';
 
 class TextStyles {
 
-    static final TextStyle font13DarkBlue = TextStyle(
+  static final TextStyle font18BlackTextW700 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorManger.black100Color,
+  );
+  
+ static final TextStyle font15GreyText400 = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w400,
+    color: ColorManger.greyTextColor,
+  );
+  static final TextStyle font15GreenText400 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: ColorManger.greenColor,
+  );
+   
+  // static final TextStyle font15GreyText400 = TextStyle(
+  //   fontSize: 15.sp,
+  //   fontWeight: FontWeight.w400,
+  //   color: ColorManger.greyTextColor,
+  // );
+  static final TextStyle font15BlackText400 = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w400,
+    color: ColorManger.black100Color,
+  );
+  static final TextStyle font12BlackText400 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: ColorManger.black100Color,
+  );
+///////
+  static final TextStyle font13DarkBlue = TextStyle(
     fontSize: 11.sp,
     fontWeight: FontWeight.w400,
     color: ColorManger.black100Color,
@@ -14,14 +47,12 @@ class TextStyles {
     fontWeight: FontWeight.w400,
     color: ColorManger.black100Color,
   );
-   static final TextStyle font11Primary100w400 = TextStyle(
+  static final TextStyle font11Primary100w400 = TextStyle(
     fontSize: 11.sp,
     fontWeight: FontWeight.w600,
     color: ColorManger.primary100Color,
   );
 
-  
-  
   static final TextStyle font12PrimaryWithOpacity400 = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeight.w400,
@@ -29,15 +60,15 @@ class TextStyles {
   );
 
   static final TextStyle font12GreyText400 = TextStyle(
-      fontSize: 12.sp,
-      fontWeight: FontWeight.w400,
-      color: ColorManger.greyTextColor,
-      );
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: ColorManger.greyTextColor,
+  );
   static final TextStyle font12Primary100W400 = TextStyle(
-      fontSize: 12.sp,
-      fontWeight: FontWeight.w400,
-      color: ColorManger.primary100Color,
-      );
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: ColorManger.primary100Color,
+  );
 
   static final TextStyle font24Primary100w700 = TextStyle(
       fontSize: 24.sp,
@@ -54,7 +85,7 @@ class TextStyles {
       fontSize: 32.sp,
       fontWeight: FontWeight.w700,
       color: ColorManger.primaryColor);
- static final TextStyle font14GreyText400 = TextStyle(
+  static final TextStyle font14GreyText400 = TextStyle(
       fontSize: 14.sp,
       fontWeight: FontWeight.w400,
       color: ColorManger.greyColor);
