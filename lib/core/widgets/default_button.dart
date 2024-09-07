@@ -13,6 +13,12 @@ class DefaultButton extends StatelessWidget {
   final Color? borderColor;
   final Color? buttonColor;
   final double? border;
+ final MaterialStateProperty<Color?>? backgroundColor;
+  final double? buttonHeight;
+    final double? buttonWidth;
+    final TextStyle? styleTextButton;
+
+
   const DefaultButton(
       {Key? key,
       required this.title,
@@ -24,7 +30,9 @@ class DefaultButton extends StatelessWidget {
       this.textColor,
       this.buttonColor,
       this.border,
-      this.fontWeight})
+      this.fontWeight,
+      this.backgroundColor,
+      this.buttonHeight,this.buttonWidth,this.styleTextButton})
       : super(key: key);
 
   @override
@@ -32,10 +40,10 @@ class DefaultButton extends StatelessWidget {
     return TextButton(
       onPressed: onPressed,
       style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(ColorManger.primaryColor),
+          backgroundColor: backgroundColor?? MaterialStateProperty.all(ColorManger.primaryColor),
           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
           minimumSize: MaterialStateProperty.all(
-            Size(double.infinity, 52.h),
+            Size(buttonWidth??double.infinity,buttonHeight ??52.h),
           ),
           shape: MaterialStatePropertyAll(
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.r)),
@@ -43,8 +51,8 @@ class DefaultButton extends StatelessWidget {
       child: Text(
         title,
         textAlign: TextAlign.center,
-        style: TextStyle(
-          color: ColorManger.whiteColor,
+        style: styleTextButton??TextStyle(
+          color:  ColorManger.whiteColor,
           fontSize: 16.sp,
           fontWeight: FontWeight.w600,
         ),

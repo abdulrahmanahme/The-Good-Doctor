@@ -14,7 +14,7 @@ class AppRouter {
     switch (routeSettings.name) {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(
-          builder: (_) => const OnBoardingScreen(),
+          builder: (_) => const HomeScreen(),
         );
       case Routes.loginScreen:
         return MaterialPageRoute(

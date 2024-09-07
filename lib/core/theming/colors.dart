@@ -17,6 +17,16 @@ class ColorManger {
   static final pink200= Colors.pink[200];
   static const greenColor= Colors.green;
   static final greyShade400= Colors.grey.shade400;
+  static final black80= Color(0xff616161);
+  static final white20= Color(0xffF5F5F5);
+  static final black100= Color(0xff151515);
+  static final primarySurface= Color(0xffF4F8FF);
+  static final waring= Color(0xffFFD600);
+
+
+
+  
+
 
 
   

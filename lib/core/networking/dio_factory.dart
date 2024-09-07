@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+// import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class DioFactory {
   /// private constructor as I don't want to allow creating an instance of this class
@@ -22,12 +22,12 @@ class DioFactory {
   }
 
    void addDioInterceptor() {
-    dio?.interceptors.add(
-      PrettyDioLogger(
-        requestBody: true,
-        requestHeader: true,
-        responseHeader: true,
-      ),
-    );
+    // dio?.interceptors.add(
+    //   // PrettyDioLogger(
+    //   //   requestBody: true,
+    //   //   requestHeader: true,
+    //   //   responseHeader: true,
+    //   // ),
+    // );
   }
 }
