@@ -22,7 +22,7 @@ void main() {
   );
   // SystemChrome.setSystemUIOverlayStyle(
   //   SystemUiOverlayStyle(
-  //     statusBarColor: Colors.blue, // Set your desired color
+  //     // statusBarColor: Colors.blue, // Set your desired color
   //     statusBarIconBrightness: Brightness.light, // For white icons
   //   ),
   // );

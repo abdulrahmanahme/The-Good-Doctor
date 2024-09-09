@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:the_good_doctor/core/networking/api_error_handler.dart';
 import 'package:the_good_doctor/core/networking/api_service.dart';

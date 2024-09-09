@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:the_good_doctor/feature/login/logic/cubit/login_cubit.dart';
-import 'package:the_good_doctor/feature/onBorading/ui/login/widgets/user_premission_widget.dart';
+import 'package:the_good_doctor/feature/login/widgets/user_premission_widget.dart';
 import '../../../../../core/helper/app_regex.dart';
 import '../../../../../core/widgets/text_from_felid_widget.dart';
 

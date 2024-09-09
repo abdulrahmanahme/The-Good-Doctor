@@ -4,12 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:the_good_doctor/core/helper/extantion.dart';
 import 'package:the_good_doctor/core/routing/routing.dart';
 import 'package:the_good_doctor/core/widgets/default_button.dart';
+import 'package:the_good_doctor/feature/login/data/model/login_request_body.dart';
 import 'package:the_good_doctor/feature/login/logic/cubit/login_cubit.dart';
-import 'package:the_good_doctor/feature/onBorading/ui/login/widgets/already_have_an_account_widget.dart';
-import 'package:the_good_doctor/feature/onBorading/ui/login/widgets/login_bloc_listener.dart';
-import 'package:the_good_doctor/feature/onBorading/ui/login/widgets/text_from_field_login_widget.dart';
+import 'package:the_good_doctor/feature/login/widgets/already_have_an_account_widget.dart';
+import 'package:the_good_doctor/feature/login/widgets/login_bloc_listener.dart';
+import 'package:the_good_doctor/feature/login/widgets/text_from_field_login_widget.dart';
 import '../../../../core/theming/text_styles.dart';
-import '../../../login/data/model/login_request_body.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -78,12 +78,12 @@ class LoginScreen extends StatelessWidget {
 void validatedAndLogin(
   BuildContext context,
 ) {
-  if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+  // if (context.read<LoginCubit>().formKey.currentState!.validate()) {
     context.read<LoginCubit>().emitLoginState(
           LoginRequestBody(
-            email: context.read<LoginCubit>().emailController.text,
-            password: context.read<LoginCubit>().passwordController.text,
+            email: 'abdo222@gmail.com',
+            password: 'A123456789@a',
           ),
         );
-  }
+  // }
 }

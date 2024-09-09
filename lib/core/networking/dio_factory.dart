@@ -1,19 +1,26 @@
 import 'package:dio/dio.dart';
+import 'package:the_good_doctor/core/app_const/app_const.dart';
 // import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class DioFactory {
   /// private constructor as I don't want to allow creating an instance of this class
   DioFactory(this.dio);
 
-   Dio? dio;
+  Dio? dio;
 
-    Dio getDio() {
+  Dio getDio() {
     Duration timeOut = const Duration(seconds: 30);
 
     if (dio != null) {
       dio!
         ..options.connectTimeout = timeOut
         ..options.receiveTimeout = timeOut;
+      dio!
+        ..options.headers = {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ${AppConst.token}',
+        };
+
       addDioInterceptor();
       return dio!;
     } else {
@@ -21,7 +28,7 @@ class DioFactory {
     }
   }
 
-   void addDioInterceptor() {
+  void addDioInterceptor() {
     // dio?.interceptors.add(
     //   // PrettyDioLogger(
     //   //   requestBody: true,

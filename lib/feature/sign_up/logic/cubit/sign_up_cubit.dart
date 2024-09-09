@@ -25,7 +25,6 @@ class SignUpCubit extends Cubit<SignUpState> {
     res.when(success: (success) {
       emit(SignUpState.success(success));
     }, failure: (error) {
-      // error.data!.entries.map((e) => '${e.value.join(".")}').join("\n")
       emit(
         SignUpState.error(
           error:  error,

@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:the_good_doctor/core/networking/api_constants.dart';
+import 'package:the_good_doctor/feature/Home/data/model/home_model.dart';
 import 'package:the_good_doctor/feature/sign_up/data/model/sign_up_request_model.dart';
 import 'package:the_good_doctor/feature/sign_up/data/model/sign_up_response_model.dart';
 import '../../feature/login/data/model/login_request_body.dart';
@@ -18,4 +19,8 @@ abstract class ApiService {
   @POST(ApiConstants.register)
   Future<SignUpResponseModel> signUp(
    @Body() SignUpRequestModel signUpRequestModel);
+
+   @GET(ApiConstants.home)
+    Future<DoctorModel> homeData();
+
 }

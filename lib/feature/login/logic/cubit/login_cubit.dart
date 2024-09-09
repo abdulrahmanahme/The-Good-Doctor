@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:the_good_doctor/core/networking/api_error_handler.dart';
+import 'package:the_good_doctor/feature/login/data/model/login_response.dart';
 import 'package:the_good_doctor/feature/login/data/repo/login_repo.dart';
 import '../../data/model/login_request_body.dart';
 part 'login_state.dart';

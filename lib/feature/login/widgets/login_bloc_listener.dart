@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_good_doctor/core/helper/extantion.dart';
@@ -28,7 +30,7 @@ class LoginBlocListener extends StatelessWidget {
           },
           success: (successState) {
             context.pop();
-            context.pushNamed(Routes.homeScreen);
+            context.pushNamed(Routes.homeScreen, arguments: successState.data.userData?.userName );
           },
           error: (error) {
             context.pop();
