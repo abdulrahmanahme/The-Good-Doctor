@@ -1,5 +1,7 @@
 import 'package:dio/dio.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:the_good_doctor/core/app_const/app_const.dart';
+import 'package:the_good_doctor/core/shared_pref/shared_pref.dart';
 // import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class DioFactory {
@@ -18,7 +20,8 @@ class DioFactory {
       dio!
         ..options.headers = {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer ${AppConst.token}',
+          'Authorization':
+              'Bearer ${SharedPref.getSecureString(AppConst.token)}',
         };
 
       addDioInterceptor();
@@ -29,12 +32,12 @@ class DioFactory {
   }
 
   void addDioInterceptor() {
-    // dio?.interceptors.add(
-    //   // PrettyDioLogger(
-    //   //   requestBody: true,
-    //   //   requestHeader: true,
-    //   //   responseHeader: true,
-    //   // ),
-    // );
+    dio?.interceptors.add(
+      PrettyDioLogger(
+        requestBody: true,
+        requestHeader: true,
+        responseHeader: true,
+      ),
+    );
   }
 }
