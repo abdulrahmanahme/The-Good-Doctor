@@ -1,10 +1,7 @@
 import 'dart:developer';
-
 import 'package:dio/dio.dart';
-import 'package:the_good_doctor/core/app_const/app_const.dart';
 import 'package:the_good_doctor/core/networking/api_error_handler.dart';
 import 'package:the_good_doctor/core/networking/api_service.dart';
-import 'package:the_good_doctor/core/shared_pref/shared_pref.dart';
 import '../../../../core/networking/api_result.dart';
 import '../model/login_request_body.dart';
 import '../model/login_response.dart';

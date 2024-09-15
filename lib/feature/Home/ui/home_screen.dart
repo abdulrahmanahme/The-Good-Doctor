@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:the_good_doctor/core/app_const/app_const.dart';
+import 'package:the_good_doctor/core/shared_pref/shared_pref.dart';
 import 'package:the_good_doctor/core/theming/colors.dart';
 import 'package:the_good_doctor/feature/Home/logic/cubit/home_cubit.dart';
 import 'package:the_good_doctor/feature/Home/logic/cubit/home_state.dart';
@@ -49,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                       current is HomeErrorState,
                   builder: (context, state) {
                     return state.maybeWhen(homeLoadingState: () {
-                      log(' qqqqqqaaaa');
+    debugPrint('ddddddddddddd ${SharedPref.getSecureString(AppConst.token)}');
           
                       return const Center(
                         child: CircularProgressIndicator(
@@ -58,6 +60,7 @@ class HomeScreen extends StatelessWidget {
                       );
                     }, homeSuccessState: (homeSuccessState) {
                       log(' fffff $homeSuccessState');
+                      
                       return Expanded(
                         child: Column(
                           mainAxisSize: MainAxisSize.min,

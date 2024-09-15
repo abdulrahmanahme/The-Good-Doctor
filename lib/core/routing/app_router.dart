@@ -32,7 +32,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
             create: (context) => getIt<HomeCubit>()..getHomeData(),
-            child:  HomeScreen(userName: args as String,),
+            child:  HomeScreen(userName: 'Abdo',),
           ),
         );
       case Routes.signUpScreen:

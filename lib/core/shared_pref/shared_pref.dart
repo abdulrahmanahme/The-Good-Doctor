@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:the_good_doctor/core/networking/dio_factory.dart';
 
 class SharedPref {
   SharedPref._();
@@ -72,13 +73,14 @@ class SharedPref {
   /// Set Secure String with [key]
   static Future<void> setSecureString(String key, dynamic value) async {
     const flutterSecureStorage =  FlutterSecureStorage();
+    DioFactory.setTokenIntoHeaderAfterLogin(value);
     await flutterSecureStorage.write(key: key, value: value);
   }
 
   /// get Secure String with [key]
-  static Future<void> getSecureString(String value) async {
+  static Future<String> getSecureString(String value) async {
     const flutterSecureStorage = FlutterSecureStorage();
-    await flutterSecureStorage.read(key: value);
+   return await flutterSecureStorage.read(key: value)??'';
   }
 
   /// Delete Secure String with [key]

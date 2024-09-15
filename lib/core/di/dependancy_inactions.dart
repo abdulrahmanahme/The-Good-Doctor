@@ -13,13 +13,10 @@ import '../networking/dio_factory.dart';
 
 final getIt = GetIt.instance;
 setUp() {
-  //Dio $ ApiService
-//  final dio=NetWorkManger.init();
-final dio=Dio();
-  // DioFactory(dio);
-  final dioFactory = DioFactory(dio);
-  dioFactory.getDio();
-  getIt.registerLazySingleton<ApiService>(() => ApiService(dio));
+  
+  final dioFactory = DioFactory.getDio();
+  // dioFactory.getDio();
+  getIt.registerLazySingleton<ApiService>(() => ApiService(dioFactory));
   
  ////login
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(getIt.get()));

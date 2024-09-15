@@ -1,7 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:the_good_doctor/core/networking/api_error_handler.dart';
-import 'package:the_good_doctor/core/networking/api_error_handler_model.dart';
 import 'package:the_good_doctor/feature/sign_up/logic/cubit/sign_up_state.dart';
 import 'package:the_good_doctor/feature/sign_up/data/model/sign_up_request_model.dart';
 import 'package:the_good_doctor/feature/sign_up/data/repo/sign_up_reo.dart';
@@ -13,7 +11,6 @@ class SignUpCubit extends Cubit<SignUpState> {
 
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-
   TextEditingController nameController = TextEditingController();
   TextEditingController phoneController = TextEditingController();
   TextEditingController genderController = TextEditingController();
@@ -27,9 +24,10 @@ class SignUpCubit extends Cubit<SignUpState> {
     }, failure: (error) {
       emit(
         SignUpState.error(
-          error:  error,
+          error: error,
         ),
       );
     });
   }
+  
 }
