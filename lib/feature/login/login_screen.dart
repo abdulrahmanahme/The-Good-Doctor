@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:the_good_doctor/core/helper/extantion.dart';
+import 'package:the_good_doctor/core/helper/hive_helper.dart';
 import 'package:the_good_doctor/core/routing/routing.dart';
 import 'package:the_good_doctor/core/widgets/default_button.dart';
 import 'package:the_good_doctor/feature/login/data/model/login_request_body.dart';
@@ -62,9 +63,10 @@ class LoginScreen extends StatelessWidget {
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-           Center(child: AlreadyHaveAnAccountWidget(
+          Center(
+              child: AlreadyHaveAnAccountWidget(
             isSignIn: true,
-            onPressed: (){
+            onPressed: () {
               context.pushNamed(Routes.signUpScreen);
             },
           )),
@@ -78,12 +80,23 @@ class LoginScreen extends StatelessWidget {
 void validatedAndLogin(
   BuildContext context,
 ) {
-  // if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+  if (context.read<LoginCubit>().formKey.currentState!.validate()) {
     context.read<LoginCubit>().emitLoginState(
           LoginRequestBody(
-            email: 'abdo222@gmail.com',
-            password: 'A123456789@a',
+            email: context.read<LoginCubit>().emailController.text,
+            password: context.read<LoginCubit>().passwordController.text,
           ),
         );
-  // }
+        cashEmailAndPassword(context);
+  }
+}
+
+void cashEmailAndPassword(
+  BuildContext context,
+) {
+  HiveHelperCash hiveHelperCash = HiveHelperCash();
+  hiveHelperCash.setEmailToCash =
+      context.read<LoginCubit>().emailController.text;
+  hiveHelperCash.setCashToPassword =
+      context.read<LoginCubit>().passwordController.text;
 }

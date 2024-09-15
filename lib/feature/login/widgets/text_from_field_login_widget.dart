@@ -62,7 +62,9 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
               keyboardType: TextInputType.visiblePassword,
             ),
             16.h.verticalSpace,
-            const UserPermissionWidget(),
+            UserPermissionWidget(
+              isChecked: context.read<LoginCubit>().isEmailAndPasswordCashed,
+            ),
           ],
         ),
       ),

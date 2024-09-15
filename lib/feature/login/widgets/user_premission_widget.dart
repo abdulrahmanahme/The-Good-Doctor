@@ -4,23 +4,21 @@ import 'package:the_good_doctor/core/theming/colors.dart';
 import 'package:the_good_doctor/core/theming/text_styles.dart';
 
 class UserPermissionWidget extends StatefulWidget {
-  const UserPermissionWidget({
-    super.key,
-  });
+  UserPermissionWidget({super.key, required this.isChecked});
+  bool isChecked;
 
   @override
   State<UserPermissionWidget> createState() => _UserPermissionWidgetState();
 }
 
 class _UserPermissionWidgetState extends State<UserPermissionWidget> {
-  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Row(children: [
       Checkbox(
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
         visualDensity: VisualDensity.compact,
-        value: isChecked,
+        value: widget.isChecked,
         activeColor: ColorManger.primaryColor,
         side: BorderSide(width: 2.w, color: ColorManger.greyCheckBoxColor),
         shape: RoundedRectangleBorder(
@@ -28,7 +26,7 @@ class _UserPermissionWidgetState extends State<UserPermissionWidget> {
         ),
         onChanged: (bool? value) {
           setState(() {
-            isChecked = value!;
+            widget.isChecked = value!;
           });
           // pro.setIsChecked(value!);
         },

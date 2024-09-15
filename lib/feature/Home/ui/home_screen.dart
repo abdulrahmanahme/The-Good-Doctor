@@ -76,7 +76,7 @@ class HomeScreen extends StatelessWidget {
                             Expanded(
                               child: ListView.separated(
                                 itemCount: homeSuccessState
-                                    .doctorspecialization![1].doctors!.length,
+                                    .doctorspecialization![0].doctors!.length,
                                 padding: EdgeInsets.symmetric(vertical: 12.h),
                                 itemBuilder: (context, int index) => DoctorCard(
                                   titleDoctor: homeSuccessState

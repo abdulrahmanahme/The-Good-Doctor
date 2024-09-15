@@ -137,7 +137,9 @@ class _TextFormFieldSignUpWidgetState extends State<TextFormFieldSignUpWidget> {
               },
               keyboardType: TextInputType.visiblePassword,
             ),
-            const UserPermissionWidget(),
+             UserPermissionWidget(
+              isChecked: false,
+             ),
             16.h.verticalSpace,
             PasswordValidations(
               hasLowerCase: hasLowerCase,
