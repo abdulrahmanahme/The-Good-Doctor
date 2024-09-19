@@ -22,11 +22,11 @@ setUp() {
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(getIt.get()));
   getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt.get()));
 
- ////SignUp
+ ///SignUp
 getIt.registerLazySingleton<SignUpRepo>(() => SignUpRepo(getIt.get()));
 getIt.registerFactory<SignUpCubit>(() => SignUpCubit(getIt.get()));
 
-////Home
+///Home
 getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt.get()));
 getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt.get()));
 
