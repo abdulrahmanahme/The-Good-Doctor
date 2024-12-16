@@ -12,6 +12,7 @@ class DocApp extends StatelessWidget {
   const DocApp({super.key, required this.appRouter});
   final AppRouter appRouter;
 
+
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
