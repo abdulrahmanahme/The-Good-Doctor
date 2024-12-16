@@ -1,5 +1,8 @@
 plugins {
     id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    // END: FlutterFire Configuration
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
 }
@@ -47,9 +50,24 @@ android {
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
-        versionCode flutterVersionCode.toInteger()
+        versionCode 2
         versionName flutterVersionName
     }
+    
+    flavorDimensions "default"
+    productFlavors  {
+      production {
+          dimension "default"
+          resValue "string", "app_name", "Good Doctor Production"
+      }
+
+      development {
+          dimension "default"
+        //   applicationIdSuffix ".dev"
+          resValue "string", "app_name", "Good Doctor Development"
+
+      }
+  }
 
     buildTypes {
         release {

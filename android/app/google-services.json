@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "812061092925",
+    "project_id": "deeplinking-64994",
+    "storage_bucket": "deeplinking-64994.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812061092925:android:a1c1264b0d9bb606b80e54",
+        "android_client_info": {
+          "package_name": "com.example.the_good_doctor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4YV0CqO0MXKOkfqYs4AJRPlUJRjH8GUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812061092925:android:e773f30a90927d5bb80e54",
+        "android_client_info": {
+          "package_name": "com.example.the_good_doctorr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4YV0CqO0MXKOkfqYs4AJRPlUJRjH8GUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
