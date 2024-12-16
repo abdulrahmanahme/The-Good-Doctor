@@ -4,8 +4,6 @@ class ApiConstants{
   static const String register= '/auth/register';
   static const String home= '/home/index';
 
-
-
 }
 class ApiErrors {
   static const String badRequestError = "badRequestError";
