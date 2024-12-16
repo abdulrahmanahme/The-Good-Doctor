@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -75,7 +74,7 @@ class _DoctorSpecialtyListViewState extends State<DoctorSpecialtyListView> {
                           ),
                         ),
                       ),
-                      10.h.verticalSpace,
+                      10.verticalSpace,
                       Expanded(
                         child: Text(
                           homeSuccessState[index].name ?? 'N/A',
@@ -92,7 +91,9 @@ class _DoctorSpecialtyListViewState extends State<DoctorSpecialtyListView> {
           },
           homeErrorState: (homeErrorState) {
             return DialogHandler.errorDialog(
-                context: context, description: homeErrorState.message);
+              context: context,
+              description: homeErrorState.message,
+            );
           },
           orElse: () {
             return const SizedBox.square();

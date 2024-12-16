@@ -37,8 +37,6 @@ class HomeCubit extends Cubit<HomeState> {
       {required int selectedSpecializeId}) async {
     List<Doctor>? doctorList = filterDoctorsList(selectedSpecializeId);
     if (!(doctorList == null || doctorList.isEmpty)) {
-      print('ssssaccccaa  ${doctorList.length}');
-
       emit(
         HomeState.doctorSocializeSuccess(doctorList),
       );
