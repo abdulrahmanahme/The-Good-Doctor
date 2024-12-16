@@ -5,6 +5,7 @@ class ApiConstants{
   static const String home= '/home/index';
 
 }
+
 class ApiErrors {
   static const String badRequestError = "badRequestError";
   static const String noContent = "noContent";
