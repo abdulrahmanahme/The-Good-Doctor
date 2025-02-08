@@ -7,6 +7,7 @@ import 'package:the_good_doctor/feature/Home/data/model/home_model.dart';
 class HomeRepo {
   HomeRepo(this._apiService);
   final ApiService _apiService;
+  
   Future<ApiResult<DoctorModel>> homeRepo() async {
     final res = await _apiService.homeData();
     try {
@@ -15,4 +16,5 @@ class HomeRepo {
       return ApiResult.failure(handleError(error));
     }
   }
+
 }

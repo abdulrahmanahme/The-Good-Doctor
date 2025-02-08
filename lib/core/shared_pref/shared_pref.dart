@@ -72,7 +72,7 @@ class SharedPref {
 
   /// Set Secure String with [key]
   static Future<void> setSecureString(String key, dynamic value) async {
-    const flutterSecureStorage =  FlutterSecureStorage();
+    const flutterSecureStorage = FlutterSecureStorage();
     DioFactory.setTokenIntoHeaderAfterLogin(value);
     await flutterSecureStorage.write(key: key, value: value);
   }
@@ -80,7 +80,7 @@ class SharedPref {
   /// get Secure String with [key]
   static Future<String> getSecureString(String value) async {
     const flutterSecureStorage = FlutterSecureStorage();
-   return await flutterSecureStorage.read(key: value)??'';
+    return await flutterSecureStorage.read(key: value) ?? '';
   }
 
   /// Delete Secure String with [key]
