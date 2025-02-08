@@ -41,4 +41,4 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-D:\studey projects\The-Good-Doctor\the_good_doctor\lib\core\app_const\app_const.dart
+lib\core\app_const\app_const.dart
